@@ -10,7 +10,7 @@
         {% csrf_token %}
         <div class="form-group ">
          <label class="control-label requiredField" for="nameSolic">
-          Nombre de qui&eacute;n solicita
+          Nombre de quién solicita
           <span class="asteriskField">
            *
           </span>
@@ -31,15 +31,15 @@
           </span>
          </label>
          <select class="select form-control" id="select" name="select">
-          <option value="Cl&iacute;nicos">
-           Cl&iacute;nicos
+          <option value="Clinicos">
+           Clínicos
           </option>
-          <option value="Direcci&oacute;n T&eacute;cnica">
-           Direcci&oacute;n T&eacute;cnica
+          <option value="Direccionn Tecnica">
+           Dirección técnica
           </option>
          </select>
         </div>
-        <div class="form-group ">
+        <div class="form-group " id="current_date">
          <label class="control-label requiredField" for="date">
           Fecha
           <span class="asteriskField">
@@ -52,6 +52,14 @@
            </i>
           </div>
           <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="date"/>
+          
+          <!-- <script>
+            Date = new Date();
+            year = Date.getFullYear();
+            month = Date.getMonth();
+            day = Date.getDate();
+            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+          </script> -->
          </div>
         </div>
         <div class="form-group ">
@@ -104,8 +112,8 @@
           </div>
           <div class="checkbox">
            <label class="checkbox">
-            <input name="checkboxAnexo" type="checkbox" value="Notificaci&oacute;n al Cliente"/>
-            Notificaci&oacute;n al Cliente
+            <input name="checkboxAnexo" type="checkbox" value="Notificacion al Cliente"/>
+            Notificaciónn al Cliente
            </label>
           </div>
          </div>
@@ -121,7 +129,7 @@
         </div>
         <div class="form-group ">
          <label class="control-label requiredField" for="text1">
-          Lab de subrogaci&oacute;n
+          Lab de subrogación
           <span class="asteriskField">
            *
           </span>
@@ -172,8 +180,8 @@
          <div class=" ">
           <div class="checkbox">
            <label class="checkbox">
-            <input name="checkbox3" type="checkbox" value="Metodolog&iacute;a"/>
-            Metodolog&iacute;a
+            <input name="checkbox3" type="checkbox" value="Metodologia"/>
+            Metodología
            </label>
           </div>
           <div class="checkbox">
@@ -210,7 +218,7 @@
         </div>
         <div class="form-group ">
          <label class="control-label requiredField" for="text3">
-          M&eacute;todolog&iacute;a
+          Metodología
           <span class="asteriskField">
            *
           </span>
