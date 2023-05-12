@@ -1,0 +1,53 @@
+{% extends '../index_master.html' %}
+{% block content %}
+<div class="right_col" role="main"> 
+<h1>Alta en interfaz</h1>
+<form action="altaInter" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="ensayo">Ensayo</label> 
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-flask"></i>
+        </div> 
+        <input id="ensayo" name="ensayo" placeholder="CLAVE , Nombre ensayo" type="text" aria-describedby="ensayoHelpBlock" required="required" class="form-control">
+      </div> 
+      <span id="ensayoHelpBlock" class="form-text text-muted">Escribir clave y nombre de ensayo de Pasteur</span>
+    </div>
+    <div class="form-group">
+      <label for="CodHost">Codigo de host</label> 
+      <textarea id="CodHost" name="CodHost" cols="40" rows="5" aria-describedby="CodHostHelpBlock" required="required" class="form-control"></textarea> 
+      <span id="CodHostHelpBlock" class="form-text text-muted">Escribe el codigo de la prueba</span>
+    </div>
+    <div class="form-group">
+      <label for="instrumento">Equipo</label> 
+      <div>
+        <select id="instrumento" name="instrumento" aria-describedby="instrumentoHelpBlock" required="required" class="custom-select">
+          <option value="Alinity C">Alinity C</option>
+          <option value="Alinity I">Alinity I</option>
+          <option value="Analyzer">Analyzer</option>
+          <option value="Architect">Architect</option>
+          <option value="Aquios">Aquios</option>
+          <option value="Aquios2">Aquios2</option>
+          <option value="Atellica">Atellica</option>
+          <option value="BC-6000">BC-6000</option>
+          <option value="CS2500">CS2500</option>
+          <option value="Liaison">Liaison XL</option>
+          <option value="Capilaris">Capilaris</option>
+          <option value="Maglumi">Maglumi</option>
+          <option value="Workstation">Workstation</option>
+          <option value="Abbott 1">Abbott 1</option>
+          <option value="Abbott 2">Abbott 2</option>
+          <option value="Alinity M">Alinity M</option>
+        </select> 
+        <span id="instrumentoHelpBlock" class="form-text text-muted">Seleccione el equipo analizador</span>
+      </div>
+    </div> 
+    <div class="form-group">
+      <button name="submit" type="submit" class="btn btn-primary">Solicitar</button>
+    </div>
+    
+  </form>
+  
+</div>
+{% endblock %}

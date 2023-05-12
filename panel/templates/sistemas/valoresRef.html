@@ -1,0 +1,246 @@
+{% extends '../index_master.html' %}
+{% block content %}
+<div class="right_col" role="main"> 
+<h1>Valores de referencia</h1>
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+     <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+       <form action="valoresRef" method="post">
+        {% csrf_token %}
+        <div class="form-group ">
+         <label class="control-label requiredField" for="nameSolic">
+          Nombre de qui&eacute;n solicita
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-user">
+           </i>
+          </div>
+          <input class="form-control" id="nameSolic" name="nameSolic" placeholder="Tu nombre" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="select">
+          Selecciona el area
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <select class="select form-control" id="select" name="select">
+          <option value="Cl&iacute;nicos">
+           Cl&iacute;nicos
+          </option>
+          <option value="Direcci&oacute;n T&eacute;cnica">
+           Direcci&oacute;n T&eacute;cnica
+          </option>
+         </select>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="date">
+          Fecha
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-calendar">
+           </i>
+          </div>
+          <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="date"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField">
+          Sistema
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class=" ">
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Pasteur"/>
+            Pasteur
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Modulab"/>
+            Modulab
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField">
+          Anexos
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class=" ">
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkboxAnexo" type="checkbox" value="Reporte Interno"/>
+            Reporte Interno
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkboxAnexo" type="checkbox" value="Reporte Maquilador"/>
+            Reporte Maquilador
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkboxAnexo" type="checkbox" value="Inserto"/>
+            Inserto
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkboxAnexo" type="checkbox" value="Notificaci&oacute;n al Cliente"/>
+            Notificaci&oacute;n al Cliente
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text">
+          Clave Catalogo
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <input class="form-control" id="text" name="text" placeholder="Clave Modulab / Pasteur" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text1">
+          Lab de subrogaci&oacute;n
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <input class="form-control" id="text1" name="text1" placeholder="Laboratorio de subrogacion" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text2">
+          Prueba y/o componente
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <input class="form-control" id="text2" name="text2" placeholder="Nombre de la prueba" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label ">
+          Motivo de Cambios
+         </label>
+         <div class=" ">
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox2" type="checkbox" value="Baja demanda"/>
+            Baja demanda
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox2" type="checkbox" value="Falta de reactivo"/>
+            Falta de reactivo
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox2" type="checkbox" value="Otro"/>
+            Otro
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField">
+          Cambios a Realizar
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class=" ">
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Metodolog&iacute;a"/>
+            Metodolog&iacute;a
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Unidades"/>
+            Unidades
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Valores de referencia"/>
+            Valores de referencia
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Tipo de muestra"/>
+            Tipo de muestra
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Nombre"/>
+            Nombre
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox3" type="checkbox" value="Otro"/>
+            Otro
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text3">
+          M&eacute;todolog&iacute;a
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <input class="form-control" id="text3" name="text3" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label " for="text4">
+          Unidades
+         </label>
+         <input class="form-control" id="text4" name="text4" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label " for="textarea">
+          Valores de Referencia
+         </label>
+         <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+         <div>
+          <button class="btn btn-primary " name="submit" type="submit">
+           Enviar
+          </button>
+         </div>
+        </div>
+        
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+</div>
+{% endblock %}

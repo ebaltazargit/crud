@@ -1,0 +1,262 @@
+{% extends '../index_master.html' %}
+{% block content %}
+<div class="right_col" role="main"> 
+<h1>Alta de ensayos y perfiles en sistema</h1>
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+     <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+       <form action='altaEnsayos' method="post">
+        {% csrf_token %}
+        <div class="form-group ">
+         <label class="control-label requiredField" for="name1">
+          Nombre
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-user">
+           </i>
+          </div>
+          <input class="form-control" id="name1" name="name1" placeholder="Nombre Solicitante" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="select">
+          Area Solicitante
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <select class="select form-control" id="select" name="select">
+          <option value="Order Entry">
+           Order Entry
+          </option>
+          <option value="Clinicos">
+           Clinicos
+          </option>
+          <option value="Direcci&oacute;n T&eacute;cnica">
+           Direcci&oacute;n T&eacute;cnica
+          </option>
+         </select>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="date">
+          Fecha de Solicitud
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-calendar">
+           </i>
+          </div>
+          <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="date"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField">
+          Paloema las opciones que requieren del alta
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class=" ">
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Intercambio"/>
+            Intercambio
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Por Cobrar"/>
+            Por Cobrar
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Pasteur"/>
+            Pasteur
+           </label>
+          </div>
+          <div class="checkbox">
+           <label class="checkbox">
+            <input name="checkbox" type="checkbox" value="Modulab"/>
+            Modulab
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text">
+          Proyecto
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <input class="form-control" id="text" name="text" placeholder="A qu&eacute; proyecto pertenece" type="text"/>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text1">
+          Clave Privada / Clave Pasteur
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-flask">
+           </i>
+          </div>
+          <input class="form-control" id="text1" name="text1" placeholder="Clave de la prueba" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text2">
+          Nombre del Ensayo
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-check-square-o">
+           </i>
+          </div>
+          <input class="form-control" id="text2" name="text2" placeholder="Nombre de la prueba" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <div class="">
+          <div class="radio">
+           <label class="radio">
+            <input name="radio" type="radio" value="Ensayo"/>
+            Ensayo
+           </label>
+          </div>
+          <div class="radio">
+           <label class="radio">
+            <input name="radio" type="radio" value="Perfil"/>
+            Perfil
+           </label>
+          </div>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="select1">
+          Laboratorio
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <select class="select form-control" id="select1" name="select1">
+          <option value="Clinicos">
+           Clinicos
+          </option>
+          <option value="Hematolog&iacute;a">
+           Hematolog&iacute;a
+          </option>
+          <option value="Biolog&iacute;a Molecular">
+           Biolog&iacute;a Molecular
+          </option>
+          <option selected="selected" value="">
+          </option>
+         </select>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="select2">
+          Tipo de muestra
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <select class="select form-control" id="select2" name="select2">
+          <option value="Suero">
+           Suero
+          </option>
+          <option value="Sangre">
+           Sangre
+          </option>
+          <option value="Orina">
+           Orina
+          </option>
+          <option selected="selected" value="">
+          </option>
+         </select>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text3">
+          Condiciones para la muestra
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-check-square-o">
+           </i>
+          </div>
+          <input class="form-control" id="text3" name="text3" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text4">
+          Motivos de rechazo
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-check-square-o">
+           </i>
+          </div>
+          <input class="form-control" id="text4" name="text4" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label requiredField" for="text5">
+          Tiempo de Entrega
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-calendar-check-o">
+           </i>
+          </div>
+          <input class="form-control" id="text5" name="text5" type="text"/>
+         </div>
+        </div>
+        <div class="form-group ">
+         <label class="control-label " for="text6">
+          Precio
+         </label>
+         <div class="input-group">
+          <div class="input-group-addon">
+           <i class="fa fa-money">
+           </i>
+          </div>
+          <input class="form-control" id="text6" name="text6" type="text"/>
+         </div>
+        </div>
+        <div class="form-group">
+         <div>
+          <button class="btn btn-primary " name="submit" type="submit">
+           Enviar
+          </button>
+         </div>
+        </div>
+        
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+</div>
+{% endblock %}
