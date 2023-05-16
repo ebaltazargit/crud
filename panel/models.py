@@ -6,6 +6,7 @@ class altaEnsayos(models.Model):
     nombreSolicitante = models.CharField(max_length=100, null=False)
     areaSolicitante = models.CharField(max_length=100, null=False)
     fechaSolicitud = models.DateField(null=False)
+    opciones = models.CharField(max_length=100, null=False, default='null')
     proyecto = models.CharField(max_length=100, null=False)
     claveEnsayo = models.CharField(max_length=100, null=False)
     nombreEnsayo = models.CharField(max_length=100, null=False)
@@ -44,3 +45,27 @@ class valoresRef(models.Model):
     ValoresReferencia = models.TextField(null=False)
     class Meta:
         db_table = 'valoresRef'
+
+class altaEnsayos2(models.Model):
+    IDaltaEnsayos2 = models.IntegerField(primary_key=True)
+    nombreSolicitante = models.CharField(max_length=100, null=False)
+    areaSolicitante = models.CharField(max_length=100, null=False)
+    fechaSolicitud = models.DateField(null=False)
+    
+    intercambio = models.CharField(max_length=100, null=False)
+    porCobrar = models.CharField(max_length=100, null=False)
+    pasteur = models.CharField(max_length=100, null=False)
+    modulab = models.CharField(max_length=100, null=False)
+
+    proyecto = models.CharField(max_length=100, null=False)
+    claveEnsayo = models.CharField(max_length=100, null=False)
+    nombreEnsayo = models.CharField(max_length=100, null=False)
+    ensayooperfil = models.CharField(max_length=100, null=False)
+    laboratorio = models.CharField(max_length=100, null=False)
+    tipoMuestra = models.CharField(max_length=100, null=False)
+    condiciones = models.CharField(max_length=100, null=False)
+    motivosRechazo = models.CharField(max_length=100, null=False)
+    tiempoEntrega = models.CharField(max_length=100, null=False)
+    precio = models.CharField(max_length=100, null=False)
+    class Meta:
+        db_table = 'altaEnsayos2'

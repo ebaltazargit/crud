@@ -6,7 +6,7 @@
     <div class="container-fluid">
      <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12">
-       <form action='altaEnsayos' method="post">
+       <form action='altaEnsayos' method="POST">
         {% csrf_token %}
         <div class="form-group ">
          <label class="control-label requiredField" for="name1">
@@ -20,7 +20,7 @@
            <i class="fa fa-user">
            </i>
           </div>
-          <input class="form-control" id="name1" name="name1" placeholder="Nombre Solicitante" type="text"/>
+          <input class="form-control" id="NombreSolicitante" name="NombreSolicitante" placeholder="Nombre Solicitante" type="text"/>
          </div>
         </div>
         <div class="form-group ">
@@ -30,15 +30,15 @@
            *
           </span>
          </label>
-         <select class="select form-control" id="select" name="select">
+         <select class="select form-control" id="AreaSolicitante" name="AreaSolicitante">
           <option value="Order Entry">
            Order Entry
           </option>
           <option value="Clinicos">
            Clinicos
           </option>
-          <option value="Direcci&oacute;n T&eacute;cnica">
-           Direcci&oacute;n T&eacute;cnica
+          <option value="Dirección Técnica">
+            Dirección Técnica
           </option>
          </select>
         </div>
@@ -54,38 +54,38 @@
            <i class="fa fa-calendar">
            </i>
           </div>
-          <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="date"/>
+          <input class="form-control" id="FechaSolicitud" name="FechaSolicitud" placeholder="DD/MM/YYYY" type="date"/>
          </div>
         </div>
         <div class="form-group ">
          <label class="control-label requiredField">
-          Paloema las opciones que requieren del alta
+          Palomea las opciones que requieren del alta
           <span class="asteriskField">
            *
           </span>
          </label>
          <div class=" ">
-          <div class="checkbox">
+          <div class="checkbox" name="opciones">
            <label class="checkbox">
-            <input name="checkbox" type="checkbox" value="Intercambio"/>
+            <input name="checkbox1" type="checkbox" value="Intercambio"/>
             Intercambio
            </label>
           </div>
           <div class="checkbox">
            <label class="checkbox">
-            <input name="checkbox" type="checkbox" value="Por Cobrar"/>
+            <input name="checkbox2" type="checkbox" value="Por Cobrar"/>
             Por Cobrar
            </label>
           </div>
           <div class="checkbox">
            <label class="checkbox">
-            <input name="checkbox" type="checkbox" value="Pasteur"/>
+            <input name="checkbox3" type="checkbox" value="Pasteur"/>
             Pasteur
            </label>
           </div>
           <div class="checkbox">
            <label class="checkbox">
-            <input name="checkbox" type="checkbox" value="Modulab"/>
+            <input name="checkbox4" type="checkbox" value="Modulab"/>
             Modulab
            </label>
           </div>
@@ -98,7 +98,7 @@
            *
           </span>
          </label>
-         <input class="form-control" id="text" name="text" placeholder="A qu&eacute; proyecto pertenece" type="text"/>
+         <input class="form-control" id="Proyecto" name="Proyecto" placeholder="A qué proyecto pertenece" type="text"/>
         </div>
         <div class="form-group ">
          <label class="control-label requiredField" for="text1">
@@ -112,7 +112,7 @@
            <i class="fa fa-flask">
            </i>
           </div>
-          <input class="form-control" id="text1" name="text1" placeholder="Clave de la prueba" type="text"/>
+          <input class="form-control" id="clavePrueba" name="clavePrueba" placeholder="Clave de la prueba" type="text"/>
          </div>
         </div>
         <div class="form-group ">
@@ -127,20 +127,20 @@
            <i class="fa fa-check-square-o">
            </i>
           </div>
-          <input class="form-control" id="text2" name="text2" placeholder="Nombre de la prueba" type="text"/>
+          <input class="form-control" id="NombreEnsayo" name="NombreEnsayo" placeholder="Nombre de la prueba" type="text"/>
          </div>
         </div>
         <div class="form-group ">
          <div class="">
           <div class="radio">
            <label class="radio">
-            <input name="radio" type="radio" value="Ensayo"/>
+            <input name="radio1" type="radio" value="type"/>
             Ensayo
            </label>
           </div>
           <div class="radio">
            <label class="radio">
-            <input name="radio" type="radio" value="Perfil"/>
+            <input name="radio2" type="radio" value="type"/>
             Perfil
            </label>
           </div>
